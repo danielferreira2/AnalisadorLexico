@@ -10,7 +10,7 @@
 ### Operadores aritméticos:
     + - * /
 ### Operadores relacionais:
-     >
+     > <
 ### Operador de atribuição:
     =
 ### Palavras reservadas:
