@@ -1,14 +1,13 @@
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
 
-  var file = File("C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\AnalisadorLexico\\src\\main\\resources\\test.txt")
-  var input = file.readText()
-  var lexScanner = LexScanner(input)
-  println(lexScanner.tokens)
+  val file = File("src/main/resources/test.txt")
+  val input = file.readText()
+  val lexScanner = LexScanner(input)
+  println(lexScanner.tokenTable)
   
 
-  
 }
 
 

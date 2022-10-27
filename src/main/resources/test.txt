@@ -1,1 +1,12 @@
-* variavel == 190
+var a = b
+var b = 10
+
+a equal 10
+
+a < 10
+a > 10
+
+var name1
+var name2
+
+fun a = var var1 + var2
