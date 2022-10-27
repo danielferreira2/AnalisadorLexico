@@ -10,3 +10,13 @@ var name1
 var name2
 
 fun a = var var1 + var2
+
+
+
+
+
+
+
+
+
+
