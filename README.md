@@ -14,7 +14,7 @@
 ### Operador de atribuição:
     =
 ### Palavras reservadas:
-    equal
+    equals
     var
     if
     else
