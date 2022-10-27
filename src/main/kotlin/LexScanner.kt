@@ -96,11 +96,13 @@ class LexScanner(input:String) {
             "if" -> true
             "else" -> true
             "while" -> true
-            "for" -> true
             "fun" -> true
             "return" -> true
             else -> false
         }
+    }
+    private fun isLetter(c: Char): Boolean {
+        return c.isLetter()
     }
     private fun isNumber(str: String): Boolean{
         val len = str.length
@@ -124,7 +126,11 @@ class LexScanner(input:String) {
         if(len == 1){
             return true
         }else for(index in 1 until len){
-            if(isSeparator(str[index])) return false
+            if(isSeparator(str[index])){
+                return false
+            }else if(!isLetter(str[index])&&!isNumber(str[index].toString())){
+                return false
+            }
         }
 
         return true
