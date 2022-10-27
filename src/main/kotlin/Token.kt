@@ -1,15 +1,17 @@
-class Token(value: String, classification: String) {
+class Token(value: String,index: Int, type: String) {
 
    private val value: String
-   private val classification: String
+   private val type: String
+   private val index: Int
 
     init{
         this.value = value
-        this.classification = classification
+        this.type = type
+        this.index = index
     }
 
     override fun toString(): String {
-        return "[ value ='$value', classification = '$classification' ]\n"
+        return "[ value: '$value', index: $index, type: '$type' ]\n"
     }
 
     companion object{

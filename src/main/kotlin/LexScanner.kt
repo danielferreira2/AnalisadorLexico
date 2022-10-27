@@ -43,17 +43,18 @@ class LexScanner(input:String) {
         return tokenList
     }
 
+
     private fun getTokenTable(tokenList:List<String>):List<Token>{
         val tokenTable = mutableListOf<Token>()
-        for(token in tokenList){
+        for((index, token) in tokenList.withIndex()){
            when{
-               isNumber(token) -> tokenTable.add(Token(token, Token.NUMBER))
-               isKeyword(token) -> tokenTable.add(Token(token, Token.KEYWORD))
-               isIdentifier(token) -> tokenTable.add(Token(token, Token.IDENTIFIER))
-               isArithmetics(token[0]) -> tokenTable.add(Token(token, Token.ARITHMETIC_OPERATOR))
-               isRelational(token[0]) -> tokenTable.add(Token(token, Token.RELATIONAL_OPERATOR))
-               isAssignment(token[0]) -> tokenTable.add(Token(token, Token.ASSIGNMENT_OPERATOR))
-               else -> tokenTable.add(Token(token, Token.INVALID_TOKEN))
+               isNumber(token) -> tokenTable.add(Token(token,index, Token.NUMBER))
+               isKeyword(token) -> tokenTable.add(Token(token,index, Token.KEYWORD))
+               isIdentifier(token) -> tokenTable.add(Token(token,index, Token.IDENTIFIER))
+               isArithmetics(token[0]) -> tokenTable.add(Token(token,index, Token.ARITHMETIC_OPERATOR))
+               isRelational(token[0]) -> tokenTable.add(Token(token,index, Token.RELATIONAL_OPERATOR))
+               isAssignment(token[0]) -> tokenTable.add(Token(token,index, Token.ASSIGNMENT_OPERATOR))
+               else -> tokenTable.add(Token(token,index, Token.INVALID_TOKEN))
            }
         }
         return tokenTable
@@ -91,7 +92,7 @@ class LexScanner(input:String) {
 
     private fun isKeyword(str: String): Boolean {
         return when (str) {
-            "equal"-> true
+            "equals"-> true
             "var" -> true
             "if" -> true
             "else" -> true
