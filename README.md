@@ -19,7 +19,6 @@
     if
     else
     while
-    for
     fun
     return
 

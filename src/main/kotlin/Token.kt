@@ -22,5 +22,6 @@ class Token(value: String,index: Int, type: String) {
         const val RELATIONAL_OPERATOR = "RELATIONAL_OPERATOR"
         const val ASSIGNMENT_OPERATOR = "ASSIGNMENT_OPERATOR"
         const val INVALID_TOKEN = "INVALID_TOKEN"
+        const val EOF = "EOF"
     }
 }

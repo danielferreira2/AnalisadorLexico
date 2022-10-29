@@ -57,6 +57,7 @@ class LexScanner(input:String) {
                else -> tokenTable.add(Token(token,index, Token.INVALID_TOKEN))
            }
         }
+        tokenTable.add(Token("EOF", tokenList.size, Token.EOF))
         return tokenTable
     }
 
