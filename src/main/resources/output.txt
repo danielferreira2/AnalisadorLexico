@@ -26,4 +26,5 @@
 , [ value: 'var1', index: 25, type: 'IDENTIFIER' ]
 , [ value: '+', index: 26, type: 'ARITHMETIC_OPERATOR' ]
 , [ value: 'var2', index: 27, type: 'IDENTIFIER' ]
+, [ value: 'EOF', index: 28, type: 'EOF' ]
 ]
